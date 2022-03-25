@@ -1,0 +1,25 @@
+.shopping-area{
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+    /* display: flex; */
+    
+}
+.shopping-area .perfume-contain {
+    /* width: 80%; */
+    /* width: 1100px; */
+}
+
+.shopping-area .cart{
+    /* width: 450px; */
+    text-align: center;
+}
+
+@media (max-width: 767.98px){
+    .shopping-area{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .shopping-area .cart{
+        /* order: 2; */
+    }
+}
