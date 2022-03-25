@@ -6,7 +6,8 @@ import Cart from '../cart/Cart';
 
 const Perfumes = () => {
     const [perfumes, setPerfumes] = useState([])
-    const [addedPerfumes, setAddedPerfumes] = useState([])
+    let [addedPerfumes, setAddedPerfumes] = useState([])
+    let [randomItem , setRandomItem] = useState({})
     
     useEffect(() => {
         fetch('perfumes.json')
@@ -15,15 +16,33 @@ const Perfumes = () => {
     }, [])
 
     // Add to cart handler
-    const addToCart = (addPerfume) => setAddedPerfumes([...addedPerfumes, addPerfume])
+    const addToCart = (addPerfume) => {
+        for (const item of addedPerfumes) {
+            if (item.id === addPerfume.id) {
+                alert('This Item has All-Ready Added')
+                return
+            }
+        }
+        setAddedPerfumes([...addedPerfumes, addPerfume])
+    }
+
+    // delete item form cart
+    const deleteItem = (id) => {
+        const updateCart = addedPerfumes.filter(item => id !== item.id);
+        setAddedPerfumes(updateCart)
+    }
 
     // Add random ones
     const addOne = () => {
-        
+        const randomItem = addedPerfumes[Math.floor(Math.random() * addedPerfumes.length)]
+        setRandomItem(randomItem)
     }
-
+    
     // reset cart
-    const resetCart = ()=>{}
+    const resetCart = () => {
+        setAddedPerfumes([])
+        setRandomItem([])
+    }
 
     return (
         <div className='shopping-area '>
@@ -44,10 +63,17 @@ const Perfumes = () => {
                     addedPerfumes.map(perfume => <Cart
                         key={perfume.id}
                         perfume={perfume}
-                        addOne={addOne}
-                        resetCart ={resetCart}> 
+                        deleteItem={deleteItem}> 
                         </Cart>)
                 }
+                <div>
+                    <button onClick={addOne} type="submit">Add One</button>
+                    <button onClick={resetCart} type="reset">Reset</button>
+                </div>
+                <div className='mt-5 '>
+                    <img src={randomItem.picture} className="added-img img-fluid rounded-circle" alt="" />
+                    <h5>{randomItem.name}</h5>
+                </div>
             </div>
         </div>
     );
