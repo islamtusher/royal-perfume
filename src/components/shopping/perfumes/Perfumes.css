@@ -1,6 +1,6 @@
 .shopping-area{
     display: grid;
-    grid-template-columns: 7fr 2fr;
+    grid-template-columns: 7fr 3fr;
     /* display: flex; */
     
 }
@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 992px){
     .shopping-area{
         display: flex;
         flex-direction:column-reverse;
