@@ -4,6 +4,7 @@ import './Answer.css'
 const Answer = () => {
     return (
         <div className='mt-5'>
+            {/* first question */}
             <h3 className='text-success text-center mb-2'>Props VS State</h3>
             <div className='d-flex flex-column flex-md-row justify-content-evenly mx-5 gap-5'>
                 <div>
@@ -11,7 +12,6 @@ const Answer = () => {
                     <p className='answer'>
                         Props is an object . It stores the value of attributes of a tag. We can pass the data from one component to another component by the Props. When we work with Similar in look different in data component Props come to play in these cases, We pass the different data in different time in the same component by props, we can Destructure the props object and use them easily. Props can be a variable function, object or array.
                         Note that, Props are read-only so we can’t change the value of props 
-
                     </p>
                 </div>
                 <div>
@@ -22,6 +22,7 @@ const Answer = () => {
                     </p>
                 </div>
             </div>
+            {/* 2nd question answer  */}
             <div className='w-75 mx-auto'>
                 <h3 className='text-center text-success my-3'>How Dose UseState Work</h3>
                 <p className='answer'>

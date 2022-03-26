@@ -1,7 +1,13 @@
 .shopping-area{
     display: grid;
     grid-template-columns: 7fr 3fr;
-    
+}
+.shopping-title{
+    width: 75%;
+    border: 1px solid black;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: rgb(252, 249, 246);
 }
 .shopping-area .cart{
     text-align: center;
@@ -23,7 +29,5 @@
     .shopping-area{
         display: flex;
         flex-direction:column-reverse;
-    }
-    .shopping-area .cart{
     }
 }
