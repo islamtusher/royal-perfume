@@ -2,7 +2,7 @@
 
 Customer service by Online Shopping
 
-## Live Site - [Royal Perfume Shop](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+## Live Site - [Royal Perfume Shop](https://dainty-madeleine-2335d2.netlify.app/)
 
 ## User Interaction
 
