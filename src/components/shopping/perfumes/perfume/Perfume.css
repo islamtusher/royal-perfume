@@ -1,0 +1,21 @@
+.item-cart{
+    width: 300px;
+    box-shadow: 1px 1px 15px 1px rgb(189, 189, 189);
+}
+.price{
+    color: rgb(255, 97, 6);
+    font-size: 25px;
+}
+.add-btn{
+    width: 100%;
+    border: none;
+    padding: 10px 0px;
+    background-color: rgb(6, 88, 121);
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.add-btn:hover{
+    background-color: rgb(5, 100, 138);
+}

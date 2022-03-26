@@ -1,17 +1,22 @@
 .shopping-area{
     display: grid;
     grid-template-columns: 7fr 3fr;
-    /* display: flex; */
     
 }
-.shopping-area .perfume-contain {
-    /* width: 80%; */
-    /* width: 1100px; */
-}
-
 .shopping-area .cart{
-    /* width: 450px; */
     text-align: center;
+}
+.shopping-area .cart .cart-btn{
+    border: none;
+    padding: 8px 20px;
+    background-color: rgb(6, 88, 121);
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.cart .cart-btn:hover{
+    background-color: rgb(5, 100, 138);
 }
 
 @media (max-width: 992px){
@@ -20,6 +25,5 @@
         flex-direction:column-reverse;
     }
     .shopping-area .cart{
-        /* order: 2; */
     }
 }

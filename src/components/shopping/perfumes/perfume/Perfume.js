@@ -1,4 +1,5 @@
 import React from 'react';
+import './Perfume.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,14 +7,14 @@ const Perfume = ({addToCart, perfume}) => {
     const { name, picture, price } = perfume
     
     return (
-        <div className='border border-1 border-dark p-0'>
-            <img src={picture} className="img-fluid w-50" alt="" />
+        <div className='item-cart p-2 '>
+            <img src={picture} className="img-fluid rounded-top" alt="" />
             <div>
-                <h3>{name}</h3>
-                <p>{price}</p>
-                <button onClick={() => addToCart(perfume)} type="submit">
+                <h5 className='mt-3'>{name}</h5>
+                <p className='price'>Price: ${price}</p>
+                <button onClick={() => addToCart(perfume)} className="add-btn" type="submit">
                     Add to Cart
-                    <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+                    <FontAwesomeIcon className='ms-2' icon={faShoppingCart}></FontAwesomeIcon>
                 </button>
             </div>
         </div>

@@ -30,10 +30,17 @@ const Perfumes = () => {
     const deleteItem = (id) => {
         const updateCart = addedPerfumes.filter(item => id !== item.id);
         setAddedPerfumes(updateCart)
+        if (randomItem.id === id) {
+            setRandomItem({})
+        }
     }
 
     // Add random ones
     const addOne = () => {
+        if (addedPerfumes.length === 0) {
+            alert('No Items to Get Randomly')
+            return
+        }
         const randomItem = addedPerfumes[Math.floor(Math.random() * addedPerfumes.length)]
         setRandomItem(randomItem)
     }
@@ -45,8 +52,9 @@ const Perfumes = () => {
     }
 
     return (
-        <div className='shopping-area '>
-            <div className='perfume-contain row row-cols-1 row-cols-sm-2 row-cols-lg-3 m-0'>
+        <div className='shopping-area  mt-5'>
+            {/* Products section */}
+            <div className='perfume-contain row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center m-0 gap-5'>
             {
                 perfumes.map(perfume => <Perfume
                     key={perfume.id}
@@ -56,6 +64,7 @@ const Perfumes = () => {
                 )
             }
             </div>
+
             {/* Cart section */}
             <div className='cart text-center'>
                 <h2>Shopping Cart</h2>
@@ -66,11 +75,11 @@ const Perfumes = () => {
                         deleteItem={deleteItem}> 
                         </Cart>)
                 }
-                <div>
-                    <button onClick={addOne} type="submit">Add One</button>
-                    <button onClick={resetCart} type="reset">Reset</button>
+                <div className='mt-5'>
+                    <button onClick={addOne} className="cart-btn m-3" type="submit">Get Randomly</button>
+                    <button onClick={resetCart} className="cart-btn" type="reset">Reset</button>
                 </div>
-                <div className='mt-5 '>
+                <div className='my-5 '>
                     <img src={randomItem.picture} className="added-img img-fluid rounded-circle" alt="" />
                     <h5>{randomItem.name}</h5>
                 </div>

@@ -1,3 +1,12 @@
 .added-img{
     width: 50px;
 }
+.delete-btn{
+    border: none;
+    color: rgb(255, 127, 53);
+    font-size: 23px;
+    background-color: white;
+}
+.delete-btn:hover{
+    color: rgb(0, 0, 0);
+}

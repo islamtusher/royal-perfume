@@ -10,7 +10,7 @@ const Cart = ({perfume, deleteItem}) => {
             <div className='d-flex justify-content-between align-items-center mx-3 mx-sm-5 mx-md-5 mx-lg-5 '>
                 <img src={picture} className="added-img img-fluid rounded-circle" alt="" />
                 <h5>{name}</h5>
-                <button onClick={()=>deleteItem(id)} type="reset"><FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
+                <button onClick={()=>deleteItem(id)} className='delete-btn' type="reset"><FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
             </div>
         </div>
     );
