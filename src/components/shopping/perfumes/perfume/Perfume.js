@@ -14,7 +14,7 @@ const Perfume = ({addToCart, perfume}) => {
                 <p className='price'>Price: ${price}</p>
                 <button onClick={() => addToCart(perfume)} className="add-btn" type="submit">
                     Add to Cart
-                    <FontAwesomeIcon className='ms-2' icon={faShoppingCart}></FontAwesomeIcon>
+                    <FontAwesomeIcon className='ms-2 text-info' icon={faShoppingCart}></FontAwesomeIcon>
                 </button>
             </div>
         </div>

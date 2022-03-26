@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+.brand-logo{
+    width: 80px;
+}
+.title{
+    color: rgb(243, 202, 97);
+    font-size: 50px;
+    font-family: 'Rouge Script', cursive;
+}
+.navbar a{
+    color: rgb(243, 202, 97);
+    font-size: 22px;
+}
+.navbar a:hover{
+    color: rgb(255, 238, 183);
+}
