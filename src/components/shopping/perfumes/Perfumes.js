@@ -17,6 +17,10 @@ const Perfumes = () => {
 
     // Add to cart handler
     const addToCart = (addPerfume) => {
+        if (addedPerfumes.length === 4) {
+            alert('You have all-ready added 4 items')
+            return
+        }
         for (const item of addedPerfumes) {
             if (item.id === addPerfume.id) {
                 alert('This Item has All-Ready Added')
